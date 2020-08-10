@@ -194,11 +194,7 @@ class StringTest {
 
         // TODO: Modify the following code to create new string from original String
         // <--Start
-        String result = "";
-        for (int i = original.length() - 1; i >= 0; i--) {
-            result += original.charAt(i);
-        }
-        final String reversed = result;
+        String reversed = new StringBuilder(original).reverse().toString();
         // --End-->
 
         assertEquals("654321", reversed);
